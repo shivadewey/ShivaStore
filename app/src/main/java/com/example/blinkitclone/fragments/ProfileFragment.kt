@@ -19,6 +19,7 @@ import com.example.blinkitclone.databinding.EditAddressLayoutBinding
 import com.example.blinkitclone.databinding.FragmentProfileBinding
 import com.example.blinkitclone.utils.Utils
 import com.example.blinkitclone.viewmodels.UserViewModel
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.launch
 
 class ProfileFragment : Fragment() {
@@ -33,6 +34,10 @@ class ProfileFragment : Fragment() {
         setStatusBarColor()
         onAddressBookClick()
         onOrdersClick()
+
+        binding.logout.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+        }
         return binding.root
     }
 

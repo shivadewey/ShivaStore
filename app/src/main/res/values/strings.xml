@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Shiva Store</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="blinkit">Shiva</string>
+    <string name="india_s_last_mintue_app">Best Grocery App</string>
+    <string name="_0">0</string>
+    <string name="search">Search</string>
+</resources>

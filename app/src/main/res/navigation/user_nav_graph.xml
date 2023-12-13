@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.blinkitclone.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_categoryProductFragment2"
+            app:destination="@id/categoryProductFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:enterAnim="@anim/from_right"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryProductFragment2"
+        android:name="com.example.blinkitclone.fragments.CategoryProductFragment"
+        android:label="fragment_category_product"
+        tools:layout="@layout/fragment_category_product" >
+        <action
+            android:id="@+id/action_categoryProductFragment2_to_orderProductFragment"
+            app:destination="@id/orderProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderProductFragment"
+        android:name="com.example.blinkitclone.fragments.OrderProductFragment"
+        android:label="fragment_order_product"
+        tools:layout="@layout/fragment_order_product" >
+        <action
+            android:id="@+id/action_orderProductFragment_to_categoryProductFragment2"
+            app:destination="@id/categoryProductFragment2"
+            app:popUpTo="@id/categoryProductFragment2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.blinkitclone.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_profileFragment_to_ordersFragment"
+            app:destination="@id/ordersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.example.blinkitclone.fragments.OrdersFragment"
+        android:label="fragment_orders"
+        tools:layout="@layout/fragment_orders" >
+        <action
+            android:id="@+id/action_ordersFragment_to_orderDetailFragment"
+            app:destination="@id/orderDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="com.example.blinkitclone.fragments.OrderDetailFragment"
+        android:label="fragment_order_detail"
+        tools:layout="@layout/fragment_order_detail" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.blinkitclone.fragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+</navigation>
